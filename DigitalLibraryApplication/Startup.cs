@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DigitalLibraryApplication.Models;
+using DigitalLibraryApplication.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,7 @@ namespace DigitalLibraryApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DigitalLibraryContext>(options => options.UseSqlite(@"Data Source=DigitalLibrary.db"));
+            services.AddTransient<IAudioBookService, AudioBookService>();
             services.AddControllersWithViews();
         }
 
