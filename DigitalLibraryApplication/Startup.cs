@@ -28,6 +28,7 @@ namespace DigitalLibraryApplication
         {
             services.AddDbContext<DigitalLibraryContext>(options => options.UseSqlite(@"Data Source=DigitalLibrary.db"));
             services.AddTransient<IAudioBookService, AudioBookService>();
+            services.AddTransient<IAudioBookServiceAsync, AudioBookServiceAsync>();
             services.AddControllersWithViews();
         }
 
