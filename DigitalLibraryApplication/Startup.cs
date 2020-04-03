@@ -56,7 +56,7 @@ namespace DigitalLibraryApplication
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=AudioBookManual}/{action=Index}/{id?}");
             });
         }
     }
