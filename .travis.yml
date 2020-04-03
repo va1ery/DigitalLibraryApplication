@@ -2,7 +2,7 @@ language: csharp
 solution: ./DigitalLibraryApplication.sln 
 dist: trusty
 mono: none
-dotnet: 3.0.0
+dotnet: 3.1
 install: 
     - dotnet restore
 script:
